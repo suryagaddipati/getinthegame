@@ -5,6 +5,17 @@
   src: url("fonts/league-gothic/League_Gothic.otf") format("opentype");
 }
 
+.button{
+  margin:auto auto;
+  text-align:center;
+  width:150px;
+  height:150px;
+  color:#FFFFFF;
+  background-color:#006699;
+  border:#003366 1px solid;
+  cursor:pointer;
+}
+
 
 body {
   margin: 0;
