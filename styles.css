@@ -363,7 +363,66 @@ input {
   -moz-text-shadow: 1px 1px 0 black;
   -webkit-text-shadow: 1px 1px 0 black;
   text-shadow: 1px 1px 0 black;
+  margin:100px;
 }
 
 
+#mauricio h1 {
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:40px;
+	margin:100px 100px 175px 100px;
+	color:#FF4F00;
+	background-color:#FFF;
+	
+}
 
+#coach{
+	width:700px;
+	white-space:nowrap;
+	margin-right:700;
+	background-repeat:repeat-x;
+	background-size:cover;
+	background-repeat:repeat;
+}
+
+
+#vimeo {
+	alignment-adjust:after-edge;
+    margin:100px 125px 120px 25px; 
+	background-color:#FFF
+}
+
+
+#maria{
+	alignment-adjust:right;
+	float:right;
+	
+}
+
+
+#gametextp1 {
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:40px;
+	color:#FFF;
+	margin-bottom:200px;
+}
+	
+	#gametextp2{
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	color:#FFF;
+	font-size-adjust:inherit;
+	font-size:40px;
+	margin:100px;
+	float:bottom;
+	
+	}
+	
+	
+	#wall{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 228px;
+	top: 9px;
+	background-color: blue;
+	}
