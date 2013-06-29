@@ -1,8 +1,24 @@
 <html>
 <head>
-<LINK REL="SHORTCUT ICON" HREF="http://www.angelfire.com/ny5/consigliere/favicon.ico">
-<title>Tic Tac Toe Game Play against the computer and choose the difficulty level. Tested in IE5.5 IE6.0 Netscape4.08 and Netscape7.02</title>
 
+
+<style>
+/* Doc Styles */
+html, body, div, table, td, a, p, img{margin:0px;padding:0px;width:auto;height:auto;font-family:'Trebuchet MS', Arial;font-size:11px;text-align:center; vertical-align:middle;color:#333333;}
+h1{font-size:24px;}
+h2{font-size:16px;}
+a{color:#006699;}a:hover{color:#0099FF;}
+img{display:block;border:0px;}
+div.page{margin:0px auto;}
+div.header{margin:25px auto;}
+div.content{margin:auto auto;text-align:center;}
+div.footer{margin-top:50px;}
+div.footer a{font-size:10px;}
+.button{margin:auto auto;text-align:center;width:200px;height:60px;color:#FFFFFF;background-color:#006699;border:#003366 1px solid;cursor:pointer;}
+</style>
+<link href="css/jquery-bubble-popup-v3.css" rel="stylesheet" type="text/css" />
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/jquery-bubble-popup-v3.min.js" type="text/javascript"></script>
 <style>
 a{text-decoration:none}
 a:hover{text-decoration: underline; color:#fff8dc;}
@@ -15,20 +31,35 @@ a:hover{text-decoration: underline; color:#fff8dc;}
 
 <h1>Tic Tac Toe</h1></font>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>  
-<script type="text/javascript" src="http://yourjavascript.com/96153235122/jquery-flip.js"></script>  
-
-<script language="javascript">
-
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
 blurbs = ['Many studies have found a positive correlation between sports participation and academic performance in high school.',
 'Your extra-curricular involvement plays a key role in the college admissions process.',
 'Start college in high school. Admissions officers look for evidence that you’re excited about something. '
 ]
-//Tic Tac Toe- By Brian (http://scriptasylum.com/bgaudiodr/)
-//Modified by Yossi Cohen (yossi@prosite.co.il)
-//Featured on Dynamicdrive.com
-//Visit http://www.dynamicdrive.com for this script
+
+		$('.button').CreateBubblePopup({
+
+									position : 'top',
+									align	 : 'center',
+									
+									innerHtml: blurbs[1], 
+
+									innerHtmlStyle: {
+														color:'#FFFFFF', 
+														'text-align':'center'
+													},
+
+									themeName: 'all-black',
+									themePath: 'jquerybubblepopup-themes'
+								 
+								});
+});
+</script>
+
+<script language="javascript">
+
 
 var image1=new Image(); image1.src="http://www.angelfire.com/ny5/consigliere/ex.gif";
 var image2=new Image(); image2.src="http://www.angelfire.com/ny5/consigliere/oh.gif";
@@ -95,11 +126,7 @@ function setlevel(x){
     init();
 }}
 
-function setbutton(cellnum){
-$("#flipbox").flip({
-direction:'tb',
-content:  'hello' //blurbs[i]
-})
+function selectMove(cellnum){
 if (!iswon){      // Thanks to Roger for finding this Bug !!!
 if(moves[cellnum]==0){
 document.images['rc'+cellnum].src="http://www.angelfire.com/ny5/consigliere/ex.gif";
@@ -109,7 +136,13 @@ game[done]=cellnum;
 done++;
 findwinner(true);
 }else alert('You cannot move here!');
-}}
+}
+}
+
+function setbutton(cellnum){
+ selectMove(cellnum);
+
+}
 
 function pcstrategy(istowin){
 if (level>0){
@@ -276,17 +309,26 @@ window.onresize=function(){
 </script>
 
 <table cellpadding="0" cellspacing="0" border="5" bordercolor="black" bordercolorlight="gray" bgcolor="white"><tr>
-<td width="55"><a href="javascript:setbutton(11)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc11"></a></td>
-<td width="55"><a href="javascript:setbutton(12)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc12"></a></td>
-<td width="55"><a href="javascript:setbutton(13)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc13"></a></td>
+    <td width="55">
+              <div class="button">
+      <a href="javascript:setbutton(11)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc11"></a>
+    </div>
+    </td>
+    <td width="55">
+      <div class="button"><a href="javascript:setbutton(12)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc12"></a></div>
+    </td>
+    <td width="55">
+      <div class="button"> <a href="javascript:setbutton(13)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc13"></a> </div>
+    </td>
+    </tr>
+    <tr>
+      <td width="55"><div class="button"><a href="javascript:setbutton(21)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc21"></a></div></td>
+      <td width="55"><div class="button"><a href="javascript:setbutton(22)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc22"></a></div></td>
+      <td width="55"><div class="button"><a href="javascript:setbutton(23)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc23"></a></div></td>
 </tr><tr>
-<td width="55"><a href="javascript:setbutton(21)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc21"></a></td>
-<td width="55"><a href="javascript:setbutton(22)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc22"></a></td>
-<td width="55"><a href="javascript:setbutton(23)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc23"></a></td>
-</tr><tr>
-<td width="55"><a href="javascript:setbutton(31)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc31"></a></td>
-<td width="55"><a href="javascript:setbutton(32)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc32"></a></td>
-<td width="55"><a href="javascript:setbutton(33)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc33"></a></td>
+<td width="55"><div class="button"><a href="javascript:setbutton(31)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc31"></a></div></td>
+<td width="55"><div class="button"><a href="javascript:setbutton(32)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc32"></a></div></td>
+<td width="55"><div class="button"><a href="javascript:setbutton(33)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc33"></a></div></td>
 </tr></table><br>
 <font face="georgia,arial,helvetica"size="3"color="#1e90ff">
 
@@ -305,7 +347,5 @@ window.onresize=function(){
 </form>
 </tr></td>
 </table></div>
-
-<div id="flipbox">Hello! I'm a flip-box! :)</div>
 </body>
 </html>
