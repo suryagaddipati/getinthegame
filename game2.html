@@ -16,9 +16,6 @@ div.footer{margin-top:50px;}
 div.footer a{font-size:10px;}
 .button{margin:auto auto;text-align:center;width:150;height:150px;color:#FFFFFF;background-color:#006699;border:#003366 1px solid;cursor:pointer;}
 </style>
-<link href="css/jquery-bubble-popup-v3.css" rel="stylesheet" type="text/css" />
-<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
-<script src="scripts/jquery-bubble-popup-v3.min.js" type="text/javascript"></script>
 <style>
 a{text-decoration:none}
 a:hover{text-decoration: underline; color:#fff8dc;}
@@ -30,6 +27,9 @@ a:hover{text-decoration: underline; color:#fff8dc;}
 <div align="center">
 
 <h1>Tic Tac Toe</h1></font>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+ <script type="text/javascript" src="http://yourjavascript.com/96153235122/jquery-flip.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -106,7 +106,7 @@ case 4: content='LEVEL: '+level+'\n\nComputer Wins:  This level- '+pcwins[level]
 break;
 }
 
-document.scores.scores2.value=content
+//document.scores.scores2.value=content
 
 if(num<4)setTimeout('init(4)',1000);
 }
@@ -130,8 +130,18 @@ findwinner(true);
 }
 }
 
+messages = [ ['http://i.imgur.com/iCHPU5N.jpg', ''],
+         ['http://i.imgur.com/QOYmnnk.jpg', ''],
+         ['http://i.imgur.com/amMr8I0.jpg', ''],
+         [ 'http://i.imgur.com/ms5fFzt.jpg', ''],
+         ]
+         
 function hintNextMove(){
-  document.images['rc'+winningSeq[moveNum]].src="http://i.imgur.com/6AxWM3L.jpg";
+  document.images['rc'+winningSeq[moveNum]].src= messages[moveNum][0];
+  $("#flipbox").flip({
+      direction:'tb',
+        content:'this is my new content'
+      })
 }
 
 winningSeq = [ 22, 33 ,31,13]
@@ -319,7 +329,6 @@ window.onresize=function(){
               <div class="button" id="button11">
                 <a href="javascript:setbutton(11)">
                   <img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc11">
-                  <p> hello </p>
                 </a>
     </div>
     </td>
@@ -339,22 +348,6 @@ window.onresize=function(){
 <td width="55"><div class="button" id="button32"><a href="javascript:setbutton(32)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc32"></a></div></td>
 <td width="55"><div class="button" id="button33"><a href="javascript:setbutton(33)"><img src="http://www.angelfire.com/ny5/consigliere/nothing.gif" border="0" name="rc33"></a></div></td>
 </tr></table><br>
-<font face="georgia,arial,helvetica"size="3"color="#1e90ff">
-
-<blockquote><i>Select a level of play then click inside one of the empty boxes to start.</font></i></blockquote>
-
-<table cellpadding="4" cellspacing="3">
-<tr>
-<td bgcolor="#000000" align="left" colspan="3">
-<font face="georgia,arial,helvetica"size="3"color="#fff0f5">
-<form name="scores"><textarea name="scores2" cols="50" rows="6" ></textarea>
-<br>
-<input type="radio" name="level" id="level" onclick="setlevel(0)">level 0 --  the Computer is totally dumb. <br>
-<input type="radio" name="level" id="level" onclick="setlevel(1)" checked>level 1 --  Computer is smarter (original version). <br>
-<input type="radio" name="level" id="level" onclick="setlevel(2)">level 2 --  You MAY win (only when you start). <br>
-<input type="radio" name="level" id="level" onclick="setlevel(3)">level 3 --  Computer NEVER lose.<br>
-</form>
-</tr></td>
-</table></div>
+<div id="flipbox">Hello! I'm a flip-box! :)</div>
 </body>
 </html>
