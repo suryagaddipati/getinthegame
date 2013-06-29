@@ -1,0 +1,10 @@
+
+@font-face {
+  font-family: "League Gothic";
+  src: url("fonts/league-gothic/League_Gothic.eot");
+}
+
+body {
+  background-image: url(images/background/photo-noscale.jpg);
+}
+

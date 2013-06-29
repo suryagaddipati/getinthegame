@@ -1,0 +1,49 @@
+#page {
+  background-image: url(images/background/row-1.gif);
+}
+#row-2-layer-1 {
+  background-image: url(images/background/row-2-top.gif);
+}
+#row-2-layer-2 {
+  background-image: url(images/background/row-2-fill.gif);
+}
+#row-2-layer-3 {
+  zoom: 1;
+  background-image: url(images/background/row-2-bottom.gif);
+}
+#banner h1 {
+  background-image: url(images/in-the-game-logo.gif);
+}
+.row-2 .column.right .column-section.top {
+  background-image: url(images/background/blue-on-orange-bottom-left-corner.gif);
+}
+.row-2 .column.right .column-section.bottom {
+  background-image: url(images/background/orange-on-blue-top-right-corner.gif);
+}
+#videos li.demo a {
+  background-image: url(images/video/demo-thumb.gif);
+}
+#videos li.teaser a {
+  background-image: url(images/video/teaser-thumb.gif);
+}
+#row-3-layer-1 {
+  width: 940px;
+  background-image: url(images/background/row-3-right.gif);
+}
+#row-3-layer-2 {
+  background-image: url(images/background/row-3-fill.gif);
+}
+#row-3-layer-3 {
+  zoom: 1;
+  background-image: url(images/background/row-3-bottom.gif);
+}
+.row-3 .column.right {
+  background-image: url(images/background/blue-on-orange-top-left-corner.gif);
+}
+#subscribe {
+  width: 340px;
+}
+#logos {
+  background-image: url(images/background/row-4.gif);
+}
+
