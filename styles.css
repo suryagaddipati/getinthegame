@@ -1,0 +1,369 @@
+
+@font-face {
+  font-family: "League Gothic";
+  font-weight: bold;
+  src: url("fonts/league-gothic/League_Gothic.otf") format("opentype");
+}
+
+
+body {
+  margin: 0;
+  padding: 0 0 50px;
+  text-align: center;
+  font: 80% helvetica, arial, sans-serif;
+  background: #000 url(images/background/photo.jpg) top center no-repeat;
+  background-attachment: fixed;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+a {
+  color: #3c7495;
+}
+input {
+  font: 1em helvetica, arial, sans-serif;
+}
+
+#page {
+  position: relative;
+  width: 940px;
+  margin: 200px auto 0;
+  padding: 130px 0 0;
+  background: url(images/background/row-1.png) top right no-repeat;
+  text-align: left;
+}
+
+#row-2-layer-1 {
+  width: 940px;
+  padding-top: 20px;
+  background: url(images/background/row-2-top.png) top left no-repeat;
+}
+#row-2-layer-2 {
+  background: url(images/background/row-2-fill.png) top left repeat-y;
+}
+#row-2-layer-3 {
+  overflow: hidden;
+  background: url(images/background/row-2-bottom.png) bottom left no-repeat;
+}
+.row-2 .column.left {
+  width: 560px;
+  float: left;
+}
+.row-2 .column.right {
+  width: 350px;
+  float: left;
+}
+.row-2 .column.right .column-section.top {
+  padding-top: 170px;
+  background: #3c7495 url(images/background/blue-on-orange-bottom-left-corner.gif) bottom left no-repeat;
+}
+.row-2 .column.right .column-section.bottom {
+  background: url(images/background/orange-on-blue-top-right-corner.gif) top right no-repeat;
+}
+
+#row-3-layer-1 {
+  width: 920px;
+  padding-right: 20px;
+  background: url(images/background/row-3-right.png) bottom right no-repeat;
+}
+#row-3-layer-2 {
+  background: url(images/background/row-3-fill.png) top left repeat-y;
+}
+#row-3-layer-3 {
+  overflow: hidden;
+  background: url(images/background/row-3-bottom.png) bottom left no-repeat;
+}
+.row-3 .column.left {
+  width: 220px;
+  float: left;
+}
+.row-3 .column.right {
+  width: 700px;
+  float: left;
+  background: url(images/background/blue-on-orange-top-left-corner.gif) top left no-repeat;
+}
+
+
+
+
+
+
+/* Banner */
+
+#banner {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 340px;
+  height: 280px;
+}
+#banner h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: url(images/in-the-game-logo.png) 0 0 no-repeat;
+  text-indent: 400px;
+  white-space: nowrap;
+}
+#banner .credit {
+  width: 200px;
+  position: absolute;
+  top: 180px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  color: #fcb034;
+  font: normal 24px "League Gothic", helvetica, arial, sans-serif;
+}
+#banner .credit .name {
+  display: block;
+  color: white;
+  font-size: 32px;
+}
+
+
+/* Synopsis */
+
+#synopsis {
+  padding: 0 30px 30px;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+#synopsis blockquote {
+  margin: 0;
+  padding: 0 0 2em;
+  color: white;
+  font-weight: bold;
+}
+#synopsis blockquote p {
+  margin: 0;
+  padding: 0;
+}
+#synopsis blockquote .attribution {
+  text-align: right;
+}
+#synopsis dfn {
+  font-weight: bold;
+}
+
+
+
+/* Videos */
+
+#videos {
+  padding: 0 30px 20px 24px;
+}
+#videos ul {
+  width: 325px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  color: #fcb034;
+  text-align: center;
+}
+#videos li {
+  list-style: none;
+  width: 154px;
+  margin: 0;
+  padding: 0;
+}
+#videos a {
+  display: block;
+  padding-top: 100px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: white;
+  font: 26px "League Gothic", helvetica, arial, sans-serif;
+  text-decoration: none;
+}
+#videos li.demo {
+  float: left;
+}
+#videos li.demo a {
+  background-image: url(images/video/demo-thumb.png);
+}
+#videos li.teaser {
+  float: right;
+}
+#videos li.teaser a {
+  background-image: url(images/video/teaser-thumb.png);
+}
+
+/* Donate */
+
+#donate {
+  padding: 20px 30px 20px 20px;
+}
+#donate h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font: normal 48px "League Gothic", helvetica, arial, sans-serif;
+}
+#donate .paypal a {
+  display: block;
+  padding: 0 0 0 114px;
+  background: white url(images/paypal-donate.gif) 9px 8px no-repeat;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 44px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#donate .address .name {
+  font-weight: bold;
+}
+
+/* Social */
+
+#social ul {
+  margin: 0;
+  padding: 0 30px;
+}
+#social li {
+  list-style: none;
+  margin: 0 0 14px;
+}
+#social a {
+  display: block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: #666;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 36px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+#social .twitter a,
+#social .facebook a {
+  padding-left: 38px;
+  background-position: 6px 6px;
+}
+#social .twitter a {
+  background-image: url(images/social/twitter.gif);
+}
+#social .facebook a {
+  background-image: url(images/social/facebook.gif);
+}
+#social .kickstarter a {
+  padding: 26px 0 0;
+  background-image: url(images/social/kickstarter.gif);
+  background-position: 8px 8px;
+  text-align: center;
+  line-height: 24px;
+}
+
+/* Subscribe */
+
+#subscribe {
+  width: 300px;
+  float: left;
+  padding: 20px;
+}
+#subscribe h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: white;
+  font: normal 32px "League Gothic", helvetica, arial, sans-serif;
+}
+#subscribe form,
+#subscribe div {
+  margin: 0;
+  padding: 0;
+}
+#subscribe .name,
+#subscribe .email {
+  margin-bottom: 10px;
+}
+#subscribe form label {
+  display: block;
+  color: white;
+  font-weight: bold;
+}
+#subscribe .name input,
+#subscribe .email input {
+  width: 97%;
+  border: 0;
+  padding: 2px;
+}
+#subscribe form .subscribe {
+  margin: 0;
+}
+
+/* Funders */
+
+#funders {
+  width: 320px;
+  float: left;
+  padding: 20px 0 20px 20px;
+  color: white;
+}
+#funders h3 {
+  color: #fcb034;
+  font-size: 1em;
+}
+#funders ul {
+  margin: 0;
+  padding: 0;
+}
+#funders li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo */
+
+#footer {
+  width: 940px;
+  overflow: hidden;
+}
+#logos {
+  position: relative;
+  float: left;
+  width: 640px;
+  height: 70px;
+  background: url(images/background/row-4.png) 0 0 no-repeat;
+}
+#logos .kartemquin {
+  display: block;
+  width: 200px;
+  height: 30px;
+  overflow: hidden;
+  position: absolute;
+  left: 413px;
+  top: 19px;
+  margin: 0;
+  padding: 0;
+  background: url(images/kartemquin-logo.gif) 0 0 no-repeat;
+  text-indent: 300px;
+  white-space: nowrap;
+}
+#site-credit {
+  width: 200px;
+  margin: 0;
+  padding: 10px 40px 10px 20px;
+  float: right;
+  text-align: right;
+}
+#site-credit a {
+  color: white;
+  font-size: 11px;
+  text-decoration: none;
+  -moz-text-shadow: 1px 1px 0 black;
+  -webkit-text-shadow: 1px 1px 0 black;
+  text-shadow: 1px 1px 0 black;
+}
+
+
+
