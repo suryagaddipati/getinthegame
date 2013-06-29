@@ -10,6 +10,55 @@
 </head>
 
 <body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>  
+<script type="text/javascript" src="http://yourjavascript.com/96153235122/jquery-flip.js"></script>  
+
+
+<script>
+blurbs = ['Many studies have found a positive correlation between sports participation and academic performance in high school.',
+'Your extra-curricular involvement plays a key role in the college admissions process.',
+'Start college in high school. Admissions officers look for evidence that you’re excited about something. '
+]
+i = 0;
+
+$(document).ready(function() {
+
+
+
+
+
+
+  $('input').click(function(e) {
+    var button = $(e.target);
+    var buttonValue = button.attr('value');
+    var buttonChangeValue = '';
+    if(buttonValue== '     ' && turn == 0 && mode == 1) {
+      buttonChangeValue = ' X '; 
+      sqr1T = 1; 
+      turn = 1;
+      vari();
+      check();
+    } else if(document.tic.sqr1.value == '     ' && turn == 1 && mode == 2) {
+      buttonChangeValue = ' X ';
+      sqr1T = 1;
+      turn = 0;
+      vari();
+      player1Check();
+    } else if(document.tic.sqr1.value == '     ' && turn == 0 && mode == 2) {
+      buttonChangeValue = ' O ';
+      sqr1T = 1;
+      turn = 1; 
+      vari(); 
+      player1Check()
+    }
+    button.attr('value',buttonChangeValue);
+    drawCheck();
+  });
+});
+
+</script>
+
 <SCRIPT>
 
 /*
@@ -62,7 +111,11 @@ sqr9 = document.tic.sqr9.value
 }
 function check()
 {
-  alert("Great Move!! Students who do show up on class have ....");
+
+$("#flipbox").flip({
+direction:'tb',
+content: blurbs[i]
+})
   if(sqr1 == " X " && sqr2 == " X " && sqr3 == " X ")
   {
     alert("You Win!")
@@ -694,16 +747,20 @@ function resetter()
 </SCRIPT>
 
 <FORM NAME="tic">
-<INPUT TYPE="button" NAME="sqr1" class="tictac" value="     " onClick="if(document.tic.sqr1.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr1.value = ' X '; sqr1T = 1; turn = 1; vari(); check();} else if(document.tic.sqr1.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr1.value = ' X '; sqr1T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr1.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr1.value = ' O '; sqr1T = 1; turn = 1; vari(); player1Check()} drawCheck()">
-<INPUT TYPE="button" NAME="sqr2" class="tictac" value="     " onClick="if(document.tic.sqr2.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr2.value = ' X '; sqr2T = 1; turn = 1; vari(); check();} else if(document.tic.sqr2.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr2.value = ' X '; sqr2T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr2.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr2.value = ' O '; sqr2T = 1; turn = 1; vari(); player1Check()} drawCheck()">
-<INPUT TYPE="button" NAME="sqr3" class="tictac" value="     " onClick="if(document.tic.sqr3.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr3.value = ' X '; sqr3T = 1; turn = 1; vari(); check();} else if(document.tic.sqr3.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr3.value = ' X '; sqr3T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr3.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr3.value = ' O '; sqr3T = 1; turn = 1; vari(); player1Check()} drawCheck()"><br />
-<INPUT TYPE="button" NAME="sqr4" class="tictac" value="     " onClick="if(document.tic.sqr4.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr4.value = ' X '; sqr4T = 1; turn = 1; vari(); check();} else if(document.tic.sqr4.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr4.value = ' X '; sqr4T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr4.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr4.value = ' O '; sqr4T = 1; turn = 1; vari(); player1Check()} drawCheck()">
-<INPUT TYPE="button" NAME="sqr5" class="tictac" value="     " onClick="if(document.tic.sqr5.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr5.value = ' X '; sqr5T = 1; turn = 1; vari(); check();} else if(document.tic.sqr5.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr5.value = ' X '; sqr5T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr5.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr5.value = ' O '; sqr5T = 1; turn = 1; vari(); player1Check()} drawCheck()">
-<INPUT TYPE="button" NAME="sqr6" class="tictac" value="     " onClick="if(document.tic.sqr6.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr6.value = ' X '; sqr6T = 1; turn = 1; vari(); check();} else if(document.tic.sqr6.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr6.value = ' X '; sqr6T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr6.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr6.value = ' O '; sqr6T = 1; turn = 1; vari(); player1Check()} drawCheck()"><br />
-<INPUT TYPE="button" NAME="sqr7" class="tictac" value="     " onClick="if(document.tic.sqr7.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr7.value = ' X '; sqr7T = 1; turn = 1; vari(); check();} else if(document.tic.sqr7.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr7.value = ' X '; sqr7T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr7.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr7.value = ' O '; sqr7T = 1; turn = 1; vari(); player1Check()} drawCheck()">
-<INPUT TYPE="button" NAME="sqr8" class="tictac" value="     " onClick="if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 1; vari(); check();} else if(document.tic.sqr8.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr8.value = ' O '; sqr8T = 1; turn = 1; vari(); player1Check()} drawCheck()">
-<INPUT TYPE="button" NAME="sqr9" class="tictac" value="     " onClick="if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 1; vari(); check();} else if(document.tic.sqr9.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr9.value = ' O '; sqr9T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+<INPUT TYPE="button" NAME="sqr1" class="tictac" value="     ">
+<INPUT TYPE="button" NAME="sqr2" class="tictac" value="     ">
+<INPUT TYPE="button" NAME="sqr3" class="tictac" value="     ">
+<br>
+<INPUT TYPE="button" NAME="sqr4" class="tictac" value="     ">
+<INPUT TYPE="button" NAME="sqr5" class="tictac" value="     ">
+<INPUT TYPE="button" NAME="sqr6" class="tictac" value="     ">
+<br>
+<INPUT TYPE="button" NAME="sqr7" class="tictac" value="     ">
+<INPUT TYPE="button" NAME="sqr8" class="tictac" value="     ">
+<INPUT TYPE="button" NAME="sqr9" class="tictac" value="     ">
+
 </form>
+<div id="flipbox">Hello! I'm a flip-box! :)</div>
 </body>
 
 </html>
