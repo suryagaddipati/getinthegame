@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 messages = [ ['http://i.imgur.com/iCHPU5N.jpg', 1],
-         ['http://i.imgur.com/QOYmnnk.jpg', 2],
+         ['http://i.imgur.com/Ea52gez.jpg', 2],
          ['http://i.imgur.com/amMr8I0.jpg', 3],
          [ 'http://i.imgur.com/ms5fFzt.jpg', 4],
          ]
