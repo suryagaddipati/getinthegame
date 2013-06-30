@@ -501,8 +501,12 @@ input {
 		
 	}
 	
-	#message3{
-		position:center;
+	#start-game{
+		float:center;
+		font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+		color:#F00;
+		background-color:#FFF;
+		
 	}
 	
 	
