@@ -1,5 +1,11 @@
 $(document).ready(function(){
   $(".message").hide()
+  messageId = ''
+  $("#start-game").click(function(e){
+      e.preventDefault();
+      hintNextMove();
+    } );
+
 });
 
 
@@ -11,9 +17,8 @@ messages = [ ['http://i.imgur.com/iCHPU5N.jpg', 1],
          
 function hintNextMove(){
   document.images['rc'+winningSeq[moveNum]].src= messages[moveNum][0];
-  $(".message").hide();
-  var messageId = "#message-"+ messages[moveNum][1];
-  $(messageId).effect('bounce');
+  $(messageId).effect('explode');
+   messageId = "#message-"+ messages[moveNum][1];
   $(messageId).show();
 }
 
