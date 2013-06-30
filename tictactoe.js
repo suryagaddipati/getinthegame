@@ -5,11 +5,31 @@ $(document).ready(function(){
     dialogClass: "no-close"
   });
   $("#start-game").click(function(e){
-      e.preventDefault();
-      hintNextMove();
-    } );
+    e.preventDefault();
+    hintNextMove();
+    $( "#dialog" ).dialog('close');
+  } );
+
+
+strategies = [ 
+   [ [ 22, 33 ,31,13], [ 21, 11 ,32,13]]
+  ];
+
+  strategyNum=0;
+  nextLesson();
+  
 
 });
+
+function nextLesson(){
+  moveNum = 0;
+
+  shuffle(messages);
+  winningSeq = strategies[strategyNum][0] ;
+  loosingSeq = strategies[strategyNum][1];
+  strategyNum++;
+  if(strategyNum > strategies.length -1) strategyNum = 0;
+}
 
 
 messages = [ ['http://i.imgur.com/iCHPU5N.jpg', 1],
@@ -68,6 +88,10 @@ if(!playerstarts)pcturn();
 }
 
 function writetext(num){
+  nextLesson();
+  $( "#dialog" ).dialog({
+    dialogClass: "no-close"
+  });
 switch(num){
 case 1: content='This game is a draw';
 break;
@@ -104,10 +128,7 @@ findwinner(true);
 }
 
 
-winningSeq = [ 22, 33 ,31,13]
-loosingSeq = [ 21, 11 ,32,13]
-moveNum = 0;
-//hintNextMove();
+
 function setbutton(cellnum){
 
   if( cellnum !== winningSeq[moveNum]) return;
@@ -281,4 +302,15 @@ window.onload=init;
 
 window.onresize=function(){
   if(ns4)setTimeout('history.go(0)',400);
+}
+
+function shuffle ( myArray ) {
+  var i = myArray.length, j, temp;
+  if ( i === 0 ) return false;
+  while ( --i ) {
+     j = Math.floor( Math.random() * ( i + 1 ) );
+     temp = myArray[i];
+     myArray[i] = myArray[j]; 
+     myArray[j] = temp;
+   }
 }
