@@ -1,6 +1,9 @@
 $(document).ready(function(){
   $(".message").hide()
   messageId = ''
+  $( "#dialog" ).dialog({
+    dialogClass: "no-close"
+  });
   $("#start-game").click(function(e){
       e.preventDefault();
       hintNextMove();

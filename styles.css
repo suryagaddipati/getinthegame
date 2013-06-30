@@ -466,4 +466,6 @@ input {
 	width: 700px;
 	height: 700px;
 }
- 
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
