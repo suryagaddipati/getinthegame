@@ -399,7 +399,7 @@ input {
 }
 
 
-#vimeo {
+    #vimeo {
 	alignment-adjust:after-edge;
     width: 1000px;
 	lenth:800px;
@@ -409,7 +409,7 @@ input {
 }
 
 
-#maria{
+    #maria{
 	alignment-adjust:right;
 	float:right;
 	white-space:nowrap;
@@ -420,20 +420,28 @@ input {
 }
 
 
-#gametextp1 {
+    #gametextp1 {
 	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-size:40px;
 	color:#FF6F12;
-	margin-bottom:200px;
+	margin-top:200px;
+	
+	
+	
+	
 }
 	
 	#gametextp2{
 	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	color:#FFF;
+	color:#FF7F22;
 	font-size-adjust:inherit;
 	font-size:40px;
-	margin:100px;
-	float:bottom;
+	margin:;
+	float:none;
+	background-color:white;
+	margin-bottom:0px;
+	float:left;
+	display:inline-block;
 	
 	}
 	
@@ -465,5 +473,37 @@ input {
 #tictactoe {
 	width: 700px;
 	height: 700px;
+	float:left;
+	white-space:nowrap;
+	background-repeat:repeat-x;
+	background-size:cover;
+	backgroung-repeat:repeat;
+	display:inline-block;
+	
+	
 }
+
+
+#linked-message{
+	
+}
+	
+	#message1{
+		color:#F00;
+		font-size:40px;
+		position:center;
+	}
+	
+	#message2{
+		color:blue;
+	    font-size:30px;
+		text-align:middle;
+		
+	}
+	
+	#message3{
+		position:center;
+	}
+	
+	
  
