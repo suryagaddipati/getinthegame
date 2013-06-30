@@ -378,12 +378,12 @@ input {
 }
 
 
-#mauricio h1 {
+#mauricio {
 	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-size:40px;
 	margin:100px 100px 175px 100px;
 	color:#FF4F00;
-	background-color:#FFF;
+	background-color:;
 	
 }
 
@@ -394,27 +394,36 @@ input {
 	background-repeat:repeat-x;
 	background-size:cover;
 	background-repeat:repeat;
+	float:left;
+	display:inline-block;
 }
 
 
 #vimeo {
 	alignment-adjust:after-edge;
-    margin:100px 125px 120px 25px; 
+    width: 1000px;
+	lenth:800px;
 	background-color:#FFF
+	float:left;
+	display:inline-block;
 }
 
 
 #maria{
 	alignment-adjust:right;
 	float:right;
-	
+	white-space:nowrap;
+	background-repeat:repeat-x;
+	background-size:cover;
+	backgroung-repeat:repeat;
+	display:inline-block;
 }
 
 
 #gametextp1 {
 	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-size:40px;
-	color:#FFF;
+	color:#FF6F12;
 	margin-bottom:200px;
 }
 	
@@ -437,3 +446,24 @@ input {
 	top: 9px;
 	background-color: blue;
 	}
+	
+	#wrapper{
+	background-color:white;
+	}
+	
+	#wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+
+
+#tictactoe {
+	width: 700px;
+	height: 700px;
+}
+ 
