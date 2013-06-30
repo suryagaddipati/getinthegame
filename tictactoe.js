@@ -37,6 +37,10 @@ messages = [ ['http://i.imgur.com/iCHPU5N.jpg', 1],
          ['http://i.imgur.com/Ea52gez.jpg', 2],
          ['http://i.imgur.com/lAU3CBY.jpg', 3],
          [ 'http://i.imgur.com/swF36gM.jpg', 4],
+         [ 'http://i.imgur.com/amMr8I0.jpg', 5],
+         [ 'http://i.imgur.com/03O8DZj.jpg', 6],
+         [ 'http://i.imgur.com/pw0Vifg.jpg', 7],
+         [ 'http://i.imgur.com/CDG2iGn.jpg', 8],
          ]
          
 function hintNextMove(){
