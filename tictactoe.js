@@ -1,17 +1,19 @@
 $(document).ready(function(){
-blurbs = ['Join A Sports Team',
-'Join a Club & develop leadership skills',
-'Take Advanced Placement (AP) Courses',
-'Build Relationships',
-'Make every day Bring your Parents to School Day',
-'Show Up For Classes',
-'Shoot for  an A, dont settle for a C',
-'Choose Caring Friends',
-'Get Enough Sleep'
-]
-
+  $(".message").hide()
 });
 
+
+messages = [ ['http://i.imgur.com/iCHPU5N.jpg', 1],
+         ['http://i.imgur.com/QOYmnnk.jpg', 2],
+         ['http://i.imgur.com/amMr8I0.jpg', 3],
+         [ 'http://i.imgur.com/ms5fFzt.jpg', 4],
+         ]
+         
+function hintNextMove(){
+  document.images['rc'+winningSeq[moveNum]].src= messages[moveNum][0];
+  $(".message").hide();
+  $("#message-"+ messages[moveNum][1]).show();
+}
 
 var image1=new Image(); image1.src="http://www.angelfire.com/ny5/consigliere/ex.gif";
 var image2=new Image(); image2.src="http://www.angelfire.com/ny5/consigliere/oh.gif";
@@ -92,19 +94,6 @@ findwinner(true);
 }
 }
 
-messages = [ ['http://i.imgur.com/iCHPU5N.jpg', ''],
-         ['http://i.imgur.com/QOYmnnk.jpg', ''],
-         ['http://i.imgur.com/amMr8I0.jpg', ''],
-         [ 'http://i.imgur.com/ms5fFzt.jpg', ''],
-         ]
-         
-function hintNextMove(){
-  document.images['rc'+winningSeq[moveNum]].src= messages[moveNum][0];
-  $("#flipbox").flip({
-      direction:'tb',
-        content:'this is my new content'
-      })
-}
 
 winningSeq = [ 22, 33 ,31,13]
 loosingSeq = [ 21, 11 ,32,13]
