@@ -486,17 +486,17 @@ input {
 	backgroung-repeat:repeat;
 	display:inline-block;
 	margin-bottom:1000;
-	margin-top:1000;
+	margin-top:2000;
 	marker-offset:inherit;
 	
 
 	
 }
-<<<<<<< HEAD
+
 .no-close .ui-dialog-titlebar-close {
   display: none;
 }
-=======
+
 
 
 	
@@ -530,5 +530,4 @@ input {
 }
 		
 	
- 
->>>>>>> 6de97c6c070badb15de399eb0d205eeb1d4f05d4
+
