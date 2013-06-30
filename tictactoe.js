@@ -12,7 +12,9 @@ messages = [ ['http://i.imgur.com/iCHPU5N.jpg', 1],
 function hintNextMove(){
   document.images['rc'+winningSeq[moveNum]].src= messages[moveNum][0];
   $(".message").hide();
-  $("#message-"+ messages[moveNum][1]).show();
+  var messageId = "#message-"+ messages[moveNum][1];
+  $(messageId).effect('bounce');
+  $(messageId).show();
 }
 
 var image1=new Image(); image1.src="http://www.angelfire.com/ny5/consigliere/ex.gif";
@@ -53,7 +55,6 @@ for(i=0;i<=8;i++){
 document.images['rc'+choices[i]].src="http://www.angelfire.com/ny5/consigliere/nothing.gif";
 document.images['rc'+choices[i]].alt="";
 game[i]=0;
-hintNextMove();
 }
 if(!playerstarts)pcturn();
 }
