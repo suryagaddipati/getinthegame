@@ -12,11 +12,11 @@ $(document).ready(function(){
 
 
 strategies = [ 
-   [ [ 22, 33 ,31,13], [ 21, 11 ,32,13]]
+   [ [ 22, 33 ,31,13], [ 21, 11 ,32,13]],
+   [ [ 22, 13 ,31,33], [ 11, 21 ,12,13]]
   ];
 
   strategyNum=0;
-  nextLesson();
   
 
 });
@@ -74,6 +74,8 @@ var ie5=(document.all && w3c)?true:false;
 var ns6=(w3c && navigator.appName.indexOf("Netscape")>=0)?true:false;
 
 function init(){
+
+  nextLesson();
 oktoplay=true;
 iswon=false;
 done=0;
@@ -88,7 +90,6 @@ if(!playerstarts)pcturn();
 }
 
 function writetext(num){
-  nextLesson();
   $( "#dialog" ).dialog({
     dialogClass: "no-close"
   });
