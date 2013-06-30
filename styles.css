@@ -405,6 +405,7 @@ input {
 	alignment-adjust:after-edge;
     width: 1000px;
 	lenth:800px;
+  position: right;
 	background-color:#FFF
 	float:left;
 	display:inline-block;
