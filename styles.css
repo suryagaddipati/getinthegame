@@ -403,11 +403,12 @@ input {
 
     #vimeo {
 	alignment-adjust:after-edge;
-    width: 1000px;
-	lenth:800px;
-	background-color:#FFF
+    
+	background-color:#FFF;
 	float:left;
 	display:inline-block;
+	
+	
 }
 
 
@@ -493,9 +494,11 @@ input {
 	
 }
 
+
 .no-close .ui-dialog-titlebar-close {
   display: none;
 }
+
 
 
 
@@ -524,10 +527,11 @@ input {
 	white-space:;
 	margin-left:auto;
 
+
 	
 
 	
-}
+} 
 		
 	
 

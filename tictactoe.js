@@ -43,12 +43,16 @@ messages = [ ['http://i.imgur.com/iCHPU5N.jpg', 1],
          [ 'http://i.imgur.com/CDG2iGn.jpg', 8],
          ]
          
+		 
+		 
 function hintNextMove(){
   document.images['rc'+winningSeq[moveNum]].src= messages[moveNum][0];
   $(messageId).effect('explode');
    messageId = "#message-"+ messages[moveNum][1];
   $(messageId).show();
 }
+
+
 
 var image1=new Image(); image1.src="http://www.angelfire.com/ny5/consigliere/ex.gif";
 var image2=new Image(); image2.src="http://www.angelfire.com/ny5/consigliere/oh.gif";
@@ -217,25 +221,31 @@ if (game[0]==11 || game[0]==13 || game[0]==31 || game[0]==33){
 tmp=22;
 myway=1;
 }
+
 else if (game[0]==22){
 selecCorner("any");
 myway=2;
 }
+
 else{
 tmp=22;
 myway=3;
 }}
+
 else if (done==3){
 if (myway==1){
 if (game[2]==44-game[0])
 tmp=choices[1+(2*Math.floor(Math.random()*4))];
+
 else
 tmp=44-game[0]
 }
+
 else if (myway==2){
 if (game[2]==44-game[1])
 selecCorner("empty");
 }
+
 else if (myway==3){
 if (game[2]==11 || game[2]==13 || game[2]==31 || game[2]==33)
 tmp=44-game[2];
@@ -244,6 +254,7 @@ dlta=22-game[2];
 tmp=22+(10/dlta);
 mynextmove=tmp+dlta;
 }
+
 else{
 dlta=22-game[0];
 op0=game[0]+(10/dlta);  
@@ -251,6 +262,7 @@ op1=game[0]-(10/dlta);
 op2=game[2]+dlta; 
 tmp=eval("op"+Math.floor(Math.random()*3));
 }}}
+
 else if (done==5 && myway==3){
 tmp=mynextmove;
 }}}
@@ -263,16 +275,21 @@ if( (moves[ways[n][1]]==me) && (moves[ways[n][2]]==me) && (moves[ways[n][3]]==me
 iswon=true;
 break;
 }}
+
 if(iswon){
 if(isplayer){
 playerwins[level]++;
 playerstarts=true;
 writetext(3);
-}else{
+}
+
+else{
 pcwins[level]++;
 playerstarts=false;
 writetext(2);
-}}else{
+}}
+
+else{
 if(done>8){
 draws[level]++;
 playerstarts=!playerstarts;
