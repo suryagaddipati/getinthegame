@@ -403,8 +403,15 @@ input {
 
     #vimeo {
 	alignment-adjust:after-edge;
+<<<<<<< HEAD
     
 	background-color:#FFF;
+=======
+    width: 1000px;
+	lenth:800px;
+  position: right;
+	background-color:#FFF
+>>>>>>> 8f2b3ffd85647c3a8c6e2491cebf80eee1e36e8b
 	float:left;
 	display:inline-block;
 	
